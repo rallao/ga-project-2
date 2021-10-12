@@ -22,6 +22,9 @@ db.on('error', (error) => console.log('MongoDB Error ' + error.message));
 // Mount Middlewares
 
 // Mount Routes
+app.get('/', (req, res) => {
+    res.send("Welcome to fitness tracker")
+})
 
 // App Listener
 const PORT = process.env.PORT;
