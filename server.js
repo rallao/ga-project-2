@@ -1,6 +1,8 @@
 // Require dependencies
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+const indexController = require('./controllers/index.js')
 
 // Initialize App
 const app = express();
@@ -20,11 +22,13 @@ db.on('error', (error) => console.log('MongoDB Error ' + error.message));
 
 
 // Mount Middlewares
+app.use(morgan('dev'));
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }))
 
 // Mount Routes
-app.get('/', (req, res) => {
-    res.send("Welcome to fitness tracker")
-})
+// Index Route
+app.use('/', indexController)
 
 // App Listener
 const PORT = process.env.PORT;
