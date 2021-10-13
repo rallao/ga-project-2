@@ -7,6 +7,9 @@ workoutsRouter.get('/', (req, res) => {
 });
 
 // New
+workoutsRouter.get('/new', (req, res) => {
+    res.render('new.ejs')
+});
 
 // Create
 
