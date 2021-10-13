@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const indexController = require('./controllers/index.js')
+const workoutsController = require('./controllers/workouts.js')
 
 // Initialize App
 const app = express();
@@ -28,7 +29,8 @@ app.use(express.urlencoded({ extended: false }))
 
 // Mount Routes
 // Index Route
-app.use('/', indexController)
+app.use('/', indexController);
+app.use('/workouts', workoutsController);
 
 // App Listener
 const PORT = process.env.PORT;
