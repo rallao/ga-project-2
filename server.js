@@ -31,8 +31,8 @@ app.use(express.urlencoded({ extended: false }))
 // Mount Routes
 // Seed Route
 app.get('/workouts/seed', async (req, res) => {
-    await Book.deleteMany({});
-    await Book.create(seedData);
+    await Workout.deleteMany({});
+    await Workout.create(seedData);
     res.redirect('/workouts');
 });
 
@@ -42,7 +42,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/workouts', (req, res) => {
-    res.render('index.ejs');
+    Workout.find({}, (err, workouts) => {
+    res.render('index.ejs', { workouts });
+    })
 });
 
 // New Route

@@ -1,10 +1,10 @@
 module.exports = [
     {
-      title: "Mornin Running",
+      title: "Dummy - Mornin Running",
       notes: "Just a chill run",
     },
     {
-      title: "Push Workout",
+      title: "Dummy - Push Workout",
       notes: "I did 25 pushups without stopping!",
     },
   ]

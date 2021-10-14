@@ -14,15 +14,15 @@
         <h1>Workout list</h1>
         <a href="/workouts/new">Add New Workout</a>
     </nav>
-    <p><strong>dummy data</strong></p>
     <ul>
-        <li>Workout 1</li>
-        <li>Workout 1</li>
-        <li>Workout 1</li>
-    </ul>
         <% workouts.forEach(wo => { %>
-        <% wo.title %>
+            <li>
+                <button data-id="<%= wo._id %>">DELETE</button>
+                <a style="margin: 0 1rem;" href="/workouts/<%= wo._id%>/edit">EDIT</a>
+                <a href="/workouts/<%= wo._id %>"><%= wo.title %></a>
+            </li>
         <% }); %>
+    </ul>
 </body>
 
-</html>
+</html> 
