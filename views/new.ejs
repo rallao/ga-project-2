@@ -23,14 +23,12 @@
             </ul>
 
         </nav>
-        <h1>Add new workouts</h1>
-        <main>
-            <form action="/workouts" method="POST">
-                <input type="text" name="title" placeholder="Title" /><br />
-                <textarea name="notes" placeholder="Notes"></textarea><br />
-                <input type="submit" value="Log Workout" />
-            </form>
-        </main>
+        <h1>Create New Book</h1>
+        <form action="/workouts" method="post" enctype="multipart/form-data">
+            Title: <input type="text" name="title" required><br>
+            Note: <input type="text" name="notes" required><br>
+            <input type="submit" value="Add Workout">
+        </form>
     </header>
 </body>
 
