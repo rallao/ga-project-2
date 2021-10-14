@@ -63,6 +63,20 @@ app.delete('/workouts/:id', (req, res) => {
 });
 
 // Update Route
+app.put('/workouts/:id', (req, res) => {
+    req.body.completed = !!req.body.completed; 
+    Workout.findByIdAndUpdate(req.params.id, req.body, (err, workout) => {
+        res.redirect(`/workouts/${req.params.id}`);
+    }); 
+    // Book.findById(req.params.id, (err, book) => {
+    //     book.imageURL = req.body.imageURL || book.imageURL
+    //     book.title = req.body.title || book.title
+    //     book.author = req.body.author || book.author
+    //     book.save(() => {
+    //         res.redirect(`/books/${req.params.id}`);
+    //     })
+    // })
+}); 
 
 // Create Route
 app.post('/workouts', (req, res) => {
