@@ -2,8 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const indexController = require('./controllers/index.js')
-const workoutsController = require('./controllers/workouts.js')
+const seedData = require('./models/seed');
 
 // Initialize App
 const app = express();
@@ -29,8 +28,14 @@ app.use(express.urlencoded({ extended: false }))
 
 // Mount Routes
 // Index Route
-app.use('/', indexController);
-app.use('/workouts', workoutsController);
+app.get('/workouts', (req, res) => {
+    res.render('index.ejs');
+});
+
+// New Route
+app.get('/workouts/new', (req, res) => {
+    res.render('new.ejs')
+});
 
 // App Listener
 const PORT = process.env.PORT;
