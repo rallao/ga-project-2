@@ -56,6 +56,11 @@ app.get('/workouts/new', (req, res) => {
 });
 
 // Delete Route
+app.delete('/workouts/:id', (req, res) => {
+    Workout.findByIdAndDelete(req.params.id, (err, deletedWorkout) => {
+        res.redirect('/books');
+    });
+});
 
 // Update Route
 

@@ -15,9 +15,11 @@
         <a href="/workouts/new">Add New Workout</a>
     </nav>
     <ul>
-        <% workouts.forEach(wo => { %>
+        <% workouts.forEach( wo => { %>
             <li>
-                <button data-id="<%= wo._id %>">DELETE</button>
+                <form method="POST" action="/workouts/<%= wo._id %>?_method=DELETE" style="display: inline; margin-right: 1rem;">
+                    <input type="submit" value="DELETE">
+                </form>
                 <a style="margin: 0 1rem;" href="/workouts/<%= wo._id%>/edit">EDIT</a>
                 <a href="/workouts/<%= wo._id %>"><%= wo.title %></a>
             </li>
