@@ -3,6 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const seedData = require('./models/seed');
+const Workout = require('./models/workout');
+
 
 // Initialize App
 const app = express();
@@ -28,6 +30,10 @@ app.use(express.urlencoded({ extended: false }))
 
 // Mount Routes
 // Index Route
+app.get('/', (req, res) => {
+    res.render('home.ejs');
+});
+
 app.get('/workouts', (req, res) => {
     res.render('index.ejs');
 });
@@ -37,6 +43,17 @@ app.get('/workouts/new', (req, res) => {
     res.render('new.ejs')
 });
 
+// Create Route
+app.post('/workout', (req, res) => {
+    if(req.body.completed === 'on') {
+        req.body.completed = true
+    } else {
+        req.body.completed = false
+    }
+    Workout.create(req.body, (error, createdWorkout) => {
+        res.send(createdWorkout)
+    })
+})
 // App Listener
 const PORT = process.env.PORT;
 app.listen(PORT, () => { 
