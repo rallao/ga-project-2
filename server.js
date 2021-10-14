@@ -62,8 +62,15 @@ app.get('/workouts/new', (req, res) => {
 // Create Route
 app.post('/workouts', (req, res) => {
     req.body.completed = !!req.body.completed;
-    Workout.create(req.body, (err, createdWorkout) => {
+    Workout.create(req.body, (err, workout) => {
         res.redirect('/workouts');
+    });
+});
+
+// Edit Route
+app.get('/workouts/:id/edit', (req, res) => {
+    Workout.findById(req.params.id, (err, workout) => {
+        res.render('edit.ejs', { workout });
     });
 });
 
