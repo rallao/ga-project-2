@@ -1,26 +1,26 @@
 module.exports = [
     {
-      title: "Dummy - Mornin Running",
+      title: "Sample Data - Mornin Running",
       notes: "Just a chill run",
     },
     {
-      title: "Dummy - Push Workout",
+      title: "Sample Data - Push Workout",
       notes: "I did 25 pushups without stopping!",
     },
     {
-      title: "Dummy - Late Running",
+      title: "Sample Data - Late Running",
       notes: "The sun was amazing",
     },
     {
-      title: "Dummy - Pull Workout",
+      title: "Sample Data - Pull Workout",
       notes: "I did 25 pushups without stopping!",
     },
     {
-      title: "Dummy - Running with Sara",
+      title: "Sample Data - Running with Sara",
       notes: "20 miles",
     },
     {
-      title: "Dummy - Legs Workout",
+      title: "Sample Data - Legs Workout",
       notes: "My anckle hurts a little",
     },
   ]
