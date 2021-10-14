@@ -7,14 +7,13 @@
     <title>Your Workouts</title>
 </head>
 <body>
+    <h1>See <%= workout.title %> Details</h1>
     <nav>
-        <a href="/workouts">See All Workouts</a>
-        <a href="workouts/new">Add a new workout</a>
+        <a href="/workouts">See All workouts</a>
+        <a href="/workouts/new">Create A New workout</a>
     </nav>
-    <a href="/">Home</a>
-    <h1>This is the show page</h1>
-    <p>In this page you can see a specific workout</p>
-
+    <h3>Title: <%= workout.title %></h3>
+    <p><%= workout.notes %></p>
     
 </body>
 </html>

@@ -9,27 +9,22 @@
 </head>
 
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/workouts">Workouts</a>
-                </li>
-
-            </ul>
-
-        </nav>
-        <h1>Add a New Workout</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/workouts">Workouts</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Add a New Workout</h1>
         <form action="/workouts" method="post" enctype="multipart/form-data">
             Title: <input type="text" name="title" required><br>
-            Note: <input type="text" name="notes" required><br>
+            Notes: <input type="text" name="notes" required><br>
             <input type="submit" value="Add Workout">
         </form>
-    </header>
 </body>
 
 </html>
