@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wor</title>
 </head>
+
 <body>
-    <h1>Workout list</h1>
     <nav>
+        <a href="/">Home</a>
+        <h1>Workout list</h1>
         <a href="/workouts/new">Add New Workout</a>
     </nav>
-
-    <p>welcome to the workout tracker app, here you will see all your past workouts</p>
-
+    <p><strong>dummy data</strong></p>
+    <ul>
+        <li>Workout 1</li>
+        <li>Workout 1</li>
+        <li>Workout 1</li>
+    </ul>
+        <% workouts.forEach(wo => { %>
+        <% wo.title %>
+        <% }); %>
 </body>
+
 </html>

@@ -29,6 +29,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }))
 
 // Mount Routes
+// Seed Route
+app.get('/workouts/seed', async (req, res) => {
+    await Book.deleteMany({});
+    await Book.create(seedData);
+    res.redirect('/workouts');
+});
+
 // Index Route
 app.get('/', (req, res) => {
     res.render('home.ejs');
@@ -44,16 +51,12 @@ app.get('/workouts/new', (req, res) => {
 });
 
 // Create Route
-app.post('/workout', (req, res) => {
-    if(req.body.completed === 'on') {
-        req.body.completed = true
-    } else {
-        req.body.completed = false
-    }
-    Workout.create(req.body, (error, createdWorkout) => {
-        res.send(createdWorkout)
-    })
-})
+app.post('/workouts', (req, res) => {
+    Workout.create(req.body, (err, createdWorkout) => {
+        console.log()
+        res.redirect('/workouts');
+    });
+});
 // App Listener
 const PORT = process.env.PORT;
 app.listen(PORT, () => { 
