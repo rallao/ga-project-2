@@ -13,7 +13,7 @@ The app consists of a running tracking app where you can log your workouts and a
     -JavaScript
 
 # Screenshots
-![screenshot 1](./public/assets/img/img4.png)
+![screenshot 1](https://i.imgur.com/d2y0G1u.png)
 ![screenshot 2](./public/assets/img/img3.png)
 ![screenshot 3](./public/assets/img/img1.png)
 
