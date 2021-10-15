@@ -1,5 +1,5 @@
 # CRUD App
-This project consist ona full project app 
+This app is a log for runners, you can save your runs, edit them or delete them.
 
 
 # Technologies Used
