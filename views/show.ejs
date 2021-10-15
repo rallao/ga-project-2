@@ -34,21 +34,18 @@
     </nav>
     <div class="d-flex justify-content-center pt-5">
         <div class="card" style="width: 18rem;">
-            <div class="card-header">
-                <p>Title: <%= workout.title %></p><br>
+            <div class="card-header center">
+                <h5 class="d-flex justify-content-center">Title: <%= workout.title %></h5>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Time: <%= workout.time %> minutes</li>
-                <li class="list-group-item">Distance: <%= workout.distance %> miles</li>
-                <li class="list-group-item">Intensity: <%= workout.intensity %></li>
-                <li class="list-group-item">Location: <%= workout.location %></li>
-                <li class="list-group-item">Notes: <%= workout.notes %></li>
+                <li class="list-group-item"><strong> Time:</strong> <%= workout.time %> minutes</li>
+                <li class="list-group-item"><strong>Distance:</strong> <%= workout.distance %> miles</li>
+                <li class="list-group-item"><strong>Intensity:</strong> <%= workout.intensity %></li>
+                <li class="list-group-item"><strong>Location:</strong> <%= workout.location %></li>
+                <li class="list-group-item"><strong>Notes:</strong> <%= workout.notes %></li>
             </ul>
         </div>
     </div>
-
-
-
 </body>
 
 </html>
