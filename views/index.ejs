@@ -64,9 +64,9 @@
                           <div class="card-body">
                               <h4><%= wo.title %></h4>
                             <p class="card-text"><%=wo.notes %></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/">View</a></button>
+                            <div class="btn-group">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/workouts/<%= wo._id %>">View</a></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary"><a href='/workouts/<%= wo._id%>/edit'>Edit</a></button>
                                 <form method="POST" action="/workouts/<%= wo._id %>?_method=DELETE"
                                     style="display: inline; margin-right: 1rem;">
