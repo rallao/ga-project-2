@@ -14,7 +14,7 @@ The app consists of a running tracking app where you can log your workouts and a
 
 # Screenshots
 ![screenshot 1](https://i.imgur.com/d2y0G1u.png)
-![screenshot 2](./public/assets/img/img3.png)
+![screenshot 2](https://i.imgur.com/QqeIItn.png)
 ![screenshot 3](./public/assets/img/img1.png)
 
 
