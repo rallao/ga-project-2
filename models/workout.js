@@ -5,7 +5,12 @@ const Schema = mongoose.Schema;
 // Create the Schema
 const workoutSchema = new Schema ({
     title: { type: String, required:true},
-    notes: { type: String, required:false}
+    // date: { type: Date, required:true }, // not working properly
+    minutes: { type: Number },
+    miles: { type: Number},
+    instensity: { type: String },
+    location: { type: String },
+    notes: { type: String }
 }, { timestamps: true});
 
 // Export the model
