@@ -19,10 +19,10 @@ The app consists of a running tracking app where you can log your workouts and a
 
 
 # Getting Started
-To get started, download the files, 
+To start you must clone this project with git clone, then you must install npm init -y and install the express, mongoose, morgan, methodOverride, dotenv and nodemon dependencies.
+You must also have a database in mongoose to connect it to the app.
 
-Soon
-
+Soon this project will be deployed in heroku
 
 # Future Enhancements
     -deploy to heroku
