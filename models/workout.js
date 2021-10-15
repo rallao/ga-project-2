@@ -7,9 +7,9 @@ const workoutSchema = new Schema ({
     title: { type: String, required:true },
     // date: { type: Date, required:true }, // <- This is broking the code
     location: { type: String },
-    time: { type: Number },
-    distance: { type: Number},
-    instensity: { type: String },
+    time: { type: String },
+    distance: { type: String},
+    intensity: { type: String },
     notes: { type: String }
 }, { timestamps: true});
 

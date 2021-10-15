@@ -28,8 +28,12 @@
     <h1>Edit <%= workout.title %></h1>
     <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
         Title: <input type="text" name="title" value="<%= workout.title %>" required><br>
+        Location: <input type="text" name="location" value="<%= workout.location %>" required><br>
+        Time: <input type="text" name="time" value="<%= workout.time %>" required><br>
+        Distance: <input type="text" name="distance" value="<%= workout.distance %>" required><br>
+        intensity: <input type="text" name="intensity" value="<%= workout.intensity %>" required><br>
         Notes: <input type="text" name="notes" value="<%= workout.notes%>" required><br>
-        <input type="submit" value="Edit workout">
+        <input type="submit" value="Edit Run">
     </form>
 </body>
 </html>
