@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 // Create the Schema
 const workoutSchema = new Schema ({
     title: { type: String, required:true},
-    // date: { type: Date, required:true }, // not working properly
-    minutes: { type: Number },
-    miles: { type: Number},
-    instensity: { type: String },
+    date: { type: Date, required:true },
     location: { type: String },
+    time: { type: Number },
+    distance: { type: Number},
+    instensity: { type: String },
     notes: { type: String }
 }, { timestamps: true});
 
