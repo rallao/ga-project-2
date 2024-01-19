@@ -1,8 +1,7 @@
 # CRUD App
-This app was created as my second project of the general assembly bootcamb, the purpose is to learn how to create a crud fullstack app using Node.js, MongoDB, Express and EJS.
+This app was created as my second project of the general assembly bootcamp, the purpose is to learn how to create a CRUD fullstack app using Node.js, MongoDB, Express and EJS.
 
-The app consists of a running tracking app where you can log your workouts and add details like location, time, distance, images and notes.
-
+The app consists on a running tracking app where you can log your workouts and add details like location, time, distance, images and notes.
 
 # Technologies Used
     -Mongoose
@@ -16,7 +15,6 @@ The app consists of a running tracking app where you can log your workouts and a
 ![screenshot 1](https://i.imgur.com/d2y0G1u.png)
 ![screenshot 2](https://i.imgur.com/QqeIItn.png)
 ![screenshot 3](https://i.imgur.com/N5zHZDf.png)
-
 
 # Getting Started
 To start you must clone this project with git clone, then you must install npm init -y and install the express, mongoose, morgan, methodOverride, dotenv and nodemon dependencies.
